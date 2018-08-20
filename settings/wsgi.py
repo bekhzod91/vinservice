@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vinservice.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings.settings_pro')
 
 application = get_wsgi_application()

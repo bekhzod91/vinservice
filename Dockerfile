@@ -1,6 +1,6 @@
 FROM centos
 
-ENV PROJECT_NAME gs1_api
+ENV PROJECT_NAME vinservice
 
 ##############################
 # Install dependency

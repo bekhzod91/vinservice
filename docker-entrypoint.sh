@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-export PROJECT_DIR=/var/www/gs1_api/
+export PROJECT_DIR=/var/www/vinservice/
 
 # Go to directory
 cd $PROJECT_DIR
@@ -17,7 +17,7 @@ chmod 775 -R $PROJECT_DIR
 chown app:app -R $PROJECT_DIR
 
 # Test
-if [[ $DJANGO_SETTINGS_MODULE == 'gsone.settings_test' ]]; then
+if [[ $DJANGO_SETTINGS_MODULE == 'settings.settings_test' ]]; then
     echo "Run testing mode"
 
     # Run test
@@ -30,6 +30,6 @@ else
     gosu app python manage.py migrate
 
     # Run project
-    exec gosu app gunicorn gsone.wsgi -b 0.0.0.0:8000
+    exec gosu app gunicorn settings.wsgi -b 0.0.0.0:8000
     exit
 fi

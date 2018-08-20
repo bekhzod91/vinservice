@@ -1,20 +1,14 @@
 version: "3"
 
 services:
-  # Redis
-  redis:
-    image: redis
-    ports:
-      - "6379:6379"
-
   # Postgres
   postgres:
     restart: always
     image: postgres:latest
     ports:
       - "5432:5432"
-    volumes:
-      - ./pgdata:/var/lib/postgresql/data
+#    volumes:
+#      - ./pgdata:/var/lib/postgresql/data
 
   # App
   web:
@@ -24,14 +18,12 @@ services:
     build: .
     links:
       - postgres:postgres
-      - redis:redis
     ports:
       - "8000:8000"
     volumes:
-      - ./media:/var/www/gs1_api/media
+      - ./media:/var/www/vinservice/media
     depends_on:
       - postgres
-      - redis
 
 volumes:
   pgdata:

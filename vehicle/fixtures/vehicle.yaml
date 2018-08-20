@@ -1,24 +1,18 @@
 #################
-# History 1
+# Vehicle data
 ################
 -
-  model: "shared.History"
+  model: "vehicle.Vehicle"
   pk: 1
   fields:
-    user: 1
-    content_type: 7
-    object_id: 1
-    text: 'Hiiiiiiiiiiii'
-    created_date: "2017-01-01T00:00:00+00:00"
-#################
-# History 2
-################
--
-  model: "shared.History"
-  pk: 2
-  fields:
-    user: 1
-    content_type: 7
-    object_id: 1
-    text: 'Hellllooooooooo'
-    created_date: "2017-01-01T00:00:00+00:00"
+    vin: "1YVHP84DX55M13025"
+    year: "2005"
+    make: "Mazda"
+    model: "MAZDA6"
+    type: "HATCHBACK 4-DR"
+    color: "Red"
+    dimensions: "38.70"
+    weight: "3455"
+    data: "{}"
+    data_owner: "decodethis"
+    created_date: "2018-01-01T00:00:00+00:00"
