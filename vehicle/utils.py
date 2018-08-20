@@ -1,0 +1,1 @@
+def get_vin_number_from_
