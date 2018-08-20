@@ -1,6 +1,6 @@
 ### Install
 ```
-$ git pull https://github.com/myrubapa/vinservice
+$ git clone https://github.com/myrubapa/vinservice
 $ cd vinservice
 $ docker-compose build
 ```
