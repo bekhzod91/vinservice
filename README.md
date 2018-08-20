@@ -17,6 +17,11 @@ $ # Wait some time for app run
 $ chrome http://localhost:8000/
 ```
 
+### Fetch vehicle data 
+```
+curl -s http://localhost:8000/vehicle/KMHDU4ADXAU832403/vin/ | python -m json.tool
+```
+
 #### Create admin
 ```
 $ docker-compose up -d
